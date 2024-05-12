@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab 2</title>
+  <style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('https://lembagakursuskomputer.files.wordpress.com/2016/05/cat-photo-19.jpg?w=640&h=427'); /* Gantikan 'background_image.jpg' dengan laluan kepada gambar anda */
+        background-size: cover;
+        background-position: center;
+    }
+    #myButton {
+      padding: 15px 30px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    #myButton:hover {
+      background-color: #45a049;
+    }
+    .typewriter {
+      overflow: hidden;
+      border-right: .15em solid orange;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: .15em;
+      animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes blink-caret {
+      from, to { border-color: transparent }
+      50% { border-color: orange }
+    }
+  </style>
+</head>
+<body>
+  <div id="button-container">
+    <button id="myButton">SYG KLIK SINI</button>
+  </div>
+  <div id="content" style="display: none;">
+    <h1 class="typewriter">I LOVE YOU SO MUCH &#9829;</h1>
+  </div>
+  <script>
+    const button = document.getElementById('myButton');
+    const content = document.getElementById('content');
+
+    button.addEventListener('click', () => {
+      content.style.display = 'block';
+      button.style.display = 'none'; // Mengubah tampilan tombol menjadi 'none'
+      document.body.style.backgroundImage = "url('https://cdns.klimg.com/resized/800x400/p/headline/135-nama-nama-kucing-betina-dari-abjad--c7c5e6.jpg')"; // Mengganti latar belakang
+      button.classList.add('animated');
+      setTimeout(() => {
+        button.classList.remove('animated');
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
